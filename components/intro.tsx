@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import me from  './assets/me.jpg'
 import {motion} from "framer-motion"
@@ -8,7 +8,17 @@ import {BsArrowRight, BsLinkedin} from 'react-icons/bs'
 import {HiDownload} from "react-icons/hi"
 import { FaGithubSquare } from 'react-icons/fa'
 
+
+
+
 export default function Intro() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        console.log('Toggle menu clicked')
+        event.stopPropagation();
+        setIsMenuOpen(!isMenuOpen);
+    };
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
         <div className='flex items-center justify-center'>
@@ -57,23 +67,47 @@ export default function Intro() {
         }}>
             <Link 
             href='#contact'
-            className="bg-indigo-100 text-black px-7 py-3 flex items-center gap-2 
-            rounded-full outline-none focus:scale-110 hover:scale-110
-             hover:bg-indigo-700 hover:text-white transition-all">
+            className="bg-indigo-100 text-indigo-900 px-7 py-3 flex items-center gap-2 
+            rounded-full outline-none border border-indigo-800 focus:scale-110 hover:scale-110
+             hover:bg-indigo-800 hover:text-white transition-all hover:border-indigo-50">
                 Contact me here <BsArrowRight/>{""}
             </Link>
-            <a className=' bg-indigo-700 text-white px-7 py-3 
-            flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-            hover:bg-indigo-50 hover:text-indigo-700 transition cursor-pointer' href="/CVen.pdf" download>
+            <div className="relative">
+            <a className=' bg-indigo-800 text-white px-7 py-3 
+            flex items-center gap-2 rounded-full outline-none border border-indigo-50 
+            focus:scale-110 hover:scale-110 active:scale-105
+            hover:bg-indigo-50 hover:text-indigo-700 transition cursor-pointer hover:border-indigo-800'
+            onClick={toggleMenu} >
                 Download CV <HiDownload/>
             </a>
-            <a className="bg-white p-4 text-indigo-800 flex items-center gap-2 rounded-full">
+            {isMenuOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 
+                    rounded-lg shadow-lg">
+                    <a href="/CVen.pdf" className="block px-4 py-2 text-gray-800 hover:bg-indigo-700 
+                        hover:text-white">English</a>
+                    <a href="/CVspa.pdf" className="block px-4 py-2 text-gray-800 hover:bg-indigo-700 
+                        hover:text-white">Spanish</a>
+                </div>
+            )}
+    </div>
+            <a className="bg-indigo-100 text-indigo-800  p-4 flex items-center gap-2 
+            rounded-full outline-none focus:scale-110 hover:scale-110
+             hover:bg-indigo-700 border border-indigo-800 hover:text-white
+              hover:border-indigo-50 transition-all"
+              href='https://www.linkedin.com/in/francisco-gonzalez-casarino-135b82237/'
+              target="_blank">
             <BsLinkedin/>
             </a>
-            <a className="bg-white p-4 text-indigo-800 flex items-center gap-2 rounded-full">
+            <a className="bg-indigo-100 text-indigo-800  p-4 flex items-center gap-2 
+            rounded-full outline-none focus:scale-110 hover:scale-110
+             hover:bg-indigo-700 border border-indigo-800 hover:text-white
+              hover:border-indigo-50 transition-all"
+              href='https://github.com/Frango113'
+              target="_blank">
             <FaGithubSquare/>
             </a>
         </motion.div>
+        
     </section>
   )
 }
