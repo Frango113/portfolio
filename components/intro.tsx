@@ -50,7 +50,7 @@ export default function Intro() {
                 </motion.div>
             </div>
         </div>
-        <motion.p className='mb-10 mt-4 px-4 text-2x1 font-medium !leading-[1.5] sm:text-4x1'
+        <motion.h1 className='mb-10 mt-4 px-4 text-2x1 font-medium !leading-[1.5] sm:text-4x1'
         initial={{opacity:0, y:100}}
         animate={{opacity:1, y:0}}>
             <span className='font-bold'>{`Hi! I'm Francisco`}</span> I'm a{"  "}
@@ -58,7 +58,7 @@ export default function Intro() {
             <span className='font-bold'>currently looking to gain experience  in the industry.</span>
             My focus is {" "}
             <span className='underline'>ReactJS, Redux and Tailwind</span>
-        </motion.p>
+        </motion.h1>
         <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
         initial={{opacity:0, y:100}}
         animate={{opacity: 1, y:0}}
