@@ -2,7 +2,7 @@ import React from "react";
 import {CgWorkAlt} from "react-icons/cg"
 import {FaReact} from "react-icons/fa"
 import {LuGraduationCap} from "react-icons/lu"
-import TripInsight from "../components/assets/TripInsight.jpeg"
+import TripInsight from "../components/assets/TripInsight.png"
 import DogsApp from "../components/assets/DogsApp.jpeg"
 import { StaticImageData } from "next/image";
 
