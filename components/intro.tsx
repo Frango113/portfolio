@@ -70,7 +70,7 @@ export default function Intro() {
         transition={{
             delay:0.1
         }}>
-<Link
+{/* <Link
           href="#contact"
           className="bg-indigo-100 text-indigo-700 px-7 py-3 flex items-center gap-2 
             rounded-full outline-none focus:scale-110 hover:scale-110
@@ -82,7 +82,7 @@ export default function Intro() {
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+        </Link> */}
             <div className="relative">
             <a className=' bg-indigo-800 text-white px-7 py-3 
             flex items-center gap-2 rounded-full outline-none border border-indigo-50 

@@ -6,6 +6,7 @@ import TripInsight from "../components/assets/TripInsight.png"
 import DogsApp from "../components/assets/DogsApp.jpeg"
 import { StaticImageData } from "next/image";
 
+
 interface ProjectData {
     title: string;
     description: string;
@@ -31,14 +32,14 @@ export const links=[
         name: "Skills",
         hash:"#skills"
     },
-    {
+     /* {
         name:"Experience",
         hash: "#experience"
-    },
-    {
+    }, */
+   /*  {
         name:"Contact",
         hash:"#contact"
-    }
+    } */
 ] as const;
 
 export const experiencesData=[
@@ -46,19 +47,21 @@ export const experiencesData=[
         title: "Fullstack developer, Henry Bootcamp",
         location: "Argentina- Remote",
         description: "Graduated with 800 hours of theoretical-practical study",
-        icon: React.createElement(LuGraduationCap),
+        icon: React.createElement(FaReact),
         date: "2023-2024"
     },
     {
         title: "Python3 Diploma- Universidad Tecnologica Nacional",
         location: "Argentina-Remote",
         description: "Learnt python from scratch",
+        icon: React.createElement(LuGraduationCap),
         date: "2022-2023"
     },
     {
         title: "UX design course- Universidad Tecnologica Nacional",
         location: "Argentina- Remote",
         description: "small course on UX design and investigation",
+        icon: React.createElement(LuGraduationCap),
         date: "2022"
     },
 ] as const
