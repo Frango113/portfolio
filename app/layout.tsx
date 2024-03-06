@@ -26,9 +26,10 @@ export default function RootLayout({
       <div className="bg-[#0D0B08] absolute top-[-6ream] -z-10 left-[-35rem] h-[31.25rem] w-[31.25rem] 
       rounded-full blur-[25rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem]
        x1:left-[-15rem] 2x1:left-[-5rem]"></div>
-       {children}
+       
        <ActiveSectionContextProvider>
        <Header/>
+       {children}
        </ActiveSectionContextProvider>
       </body>
     </html>
