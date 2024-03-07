@@ -5,6 +5,7 @@ import {LuGraduationCap} from "react-icons/lu"
 import TripInsight from "../components/assets/TripInsight.png"
 import DogsApp from "../components/assets/DogsApp.jpeg"
 import { StaticImageData } from "next/image";
+import KTRsys from "../components/assets/KTRsys.png"
 
 
 interface ProjectData {
@@ -85,7 +86,7 @@ export const projectsData:ProjectData[]=[
         title: "KTR dealer App",
         description: "simple database management app, created with Python, Tkinter and SQLite",
         tags: ["Python", "Tkinter", "SQLite"],
-        ProjectImage: DogsApp
+        ProjectImage: KTRsys
     }
 ] as const;
 export const skillsData =[
