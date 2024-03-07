@@ -1,12 +1,12 @@
 "use client"
-import React, {useState} from 'react'
-import Image from 'next/image'
-import me from  './assets/me.jpg'
+import React, {useState} from "react"
+import Image from "next/image"
+import me from  "./assets/me.jpg"
 import {motion} from "framer-motion"
-import Link from 'next/link'
-import {BsArrowRight, BsLinkedin} from 'react-icons/bs'
+import Link from "next/link"
+import {BsArrowRight, BsLinkedin} from "react-icons/bs"
 import {HiDownload} from "react-icons/hi"
-import { FaGithubSquare } from 'react-icons/fa'
+import { FaGithubSquare } from "react-icons/fa"
 import { useSectionInView } from "@/lib/hooks"
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -18,7 +18,7 @@ export default function Intro() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        console.log('Toggle menu clicked')
+        console.log("Toggle menu clicked")
         event.stopPropagation();
         setIsMenuOpen(!isMenuOpen);
     };
@@ -26,8 +26,8 @@ export default function Intro() {
     <section
     ref= {ref}
     id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-        <div className='flex items-center justify-center'>
-            <div className='relative'
+        <div className="flex items-center justify-center">
+            <div className="relative"
                 >
             <motion.div
             initial={{opacity:0 , scale: 0}}
@@ -41,12 +41,12 @@ export default function Intro() {
                 height="192"
                 quality="95"
                 priority={true}
-                className='h-24 w-24 rounded-full object-cover border-[0.35rem] border-yellow'></Image>
-                <motion.span className='absolute bottom-0 right-0 text 4x1'
+                className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-yellow"></Image>
+                <motion.span className="absolute bottom-0 right-0 text 4x1"
                 initial={{opacity:0, scale:0}}
                 animate={{opacity:1,scale:1}}
                 transition={{
-                    type:'spring',
+                    type:"spring",
                     stiffness:125,
                     delay:0.1,
                     duration: 0.7,
@@ -55,16 +55,16 @@ export default function Intro() {
                 </motion.div>
             </div>
         </div>
-        <motion.h1 className='mb-10 mt-4 px-4 text-2x1 font-medium !leading-[1.5] sm:text-4x1'
+        <motion.h1 className="mb-10 mt-4 px-4 text-2x1 font-medium !leading-[1.5] sm:text-4x1"
         initial={{opacity:0, y:100}}
         animate={{opacity:1, y:0}}>
-            <span className='font-bold'>{`Hi! I'm Francisco`}</span> I'm a{"  "}
-            <span className='font-bold'>Junior Front-end developer </span>who's {" "}
-            <span className='font-bold'>currently looking to gain experience  in the industry.</span>
+            <span className="font-bold">{`Hi! I"m Francisco`}</span> I"m a{"  "}
+            <span className="font-bold">Junior Front-end developer </span>who"s {" "}
+            <span className="font-bold">currently looking to gain experience  in the industry.</span>
             My focus is {" "}
-            <span className='underline'>ReactJS, Redux and Tailwind</span>
+            <span className="underline">ReactJS, Redux and Tailwind</span>
         </motion.h1>
-        <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
+        <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{opacity:0, y:100}}
         animate={{opacity: 1, y:0}}
         transition={{
@@ -84,10 +84,10 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link> */}
             <div className="relative">
-            <a className=' bg-indigo-800 text-white px-7 py-3 
+            <a className=" bg-indigo-800 text-white px-7 py-3 
             flex items-center gap-2 rounded-full outline-none border border-indigo-50 
             focus:scale-110 hover:scale-110 active:scale-105
-            hover:bg-indigo-50 hover:text-indigo-700 transition cursor-pointer hover:border-indigo-800'
+            hover:bg-indigo-50 hover:text-indigo-700 transition cursor-pointer hover:border-indigo-800"
             onClick={toggleMenu} >
                 Download CV <HiDownload/>
             </a>
@@ -105,7 +105,7 @@ export default function Intro() {
             rounded-full outline-none focus:scale-110 hover:scale-110
              hover:bg-indigo-700 border border-indigo-800 hover:text-white
               hover:border-indigo-50 transition-all"
-              href='https://www.linkedin.com/in/francisco-gonzalez-casarino-135b82237/'
+              href="https://www.linkedin.com/in/francisco-gonzalez-casarino-135b82237/"
               target="_blank">
             <BsLinkedin/>
             </a>
@@ -113,7 +113,7 @@ export default function Intro() {
             rounded-full outline-none focus:scale-110 hover:scale-110
              hover:bg-indigo-700 border border-indigo-800 hover:text-white
               hover:border-indigo-50 transition-all"
-              href='https://github.com/Frango113'
+              href="https://github.com/Frango113"
               target="_blank">
             <FaGithubSquare/>
             </a>
