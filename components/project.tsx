@@ -4,6 +4,7 @@ import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { FaGithubSquare } from "react-icons/fa"
 
 
 type ProjectProps= (typeof projectsData)[number];
@@ -13,7 +14,8 @@ export default function Project({
     title,
     description,
     tags,
-    ProjectImage
+    ProjectImage,
+    Repolink
 }:ProjectProps){
   const ref =useRef<HTMLDivElement>(null)
   const {scrollYProgress}= 
@@ -52,6 +54,10 @@ export default function Project({
                   </li>
                 ))}
               </ul>
+              <a href={Repolink} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center text-gray-600 dark:text-white">
+            <FaGithubSquare className="mr-2" />
+            GitHub
+          </a>
             </div>
     
             <Image

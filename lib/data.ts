@@ -13,6 +13,7 @@ interface ProjectData {
     description: string;
     tags: string[];
     ProjectImage: StaticImageData; // Assuming these are image imports, you might need to adjust the type
+    Repolink: string
 }
 
 export const links=[
@@ -49,7 +50,7 @@ export const experiencesData=[
         location: "Argentina- Remote",
         description: "Graduated with 800 hours of theoretical-practical study",
         icon: React.createElement(FaReact),
-        date: "2023-2024"
+        date: "2023-2024",
     },
     {
         title: "Python3 Diploma- Universidad Tecnologica Nacional",
@@ -72,25 +73,28 @@ export const projectsData:ProjectData[]=[
         title: "Trip In Sight",
         description: "I worked as a Front-End Engineer, developing the web app using React.js for the user interface, Integrated Paypal api to the App",
         tags:["React", "JavaScript", "Redux-Toolkit", "Tailwind", "PayPal Api"],
-        ProjectImage:TripInsight
+        ProjectImage:TripInsight,
+        Repolink: "https://github.com/Veronicayf/TripInSight"
 
     },
     {
         title: "K9's",
         description: "Designed and developed the app, both server side and client side, a simple SPA that gives the user information about different dog breeds",
         tags:["React", "JavaScript", "Redux", "CSS", "Express", "Sequelize"],
-        ProjectImage: DogsApp
+        ProjectImage: DogsApp,
+        Repolink: "https://github.com/Frango113/PI-DOGS"
 
     },
     {
         title: "KTR dealer App",
         description: "simple database management app, created with Python, Tkinter and SQLite",
         tags: ["Python", "Tkinter", "SQLite"],
-        ProjectImage: KTRsys
+        ProjectImage: KTRsys,
+        Repolink:"https://github.com/Frango113/KTR-Dealer-App-V4"
     }
 ] as const;
 export const skillsData =[
-    "HTML", "CSS", "JaVaScript", "React", "Node.JS", "Git", "Redux", "Express", "Python", "PostgreSQL"]
+    "HTML", "CSS", "JavaScript", "React", "Node.JS", "Git", "Redux", "Express", "Python", "PostgreSQL"]
 
 
 
